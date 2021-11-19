@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Convertitore Online</title>
+  <meta name="description" content="Un semplice convertitore online per lunghezza, peso e temperatura.">
+  <meta name="author" content="Andrea Recce">
+
+  <link rel="icon" href="img/favicon.ico">
+  
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <header>
+    <div id="title" class="container">
+     <img src="img/Convertitore Online_free-file.png" alt="Logo title" width="300" />
+    </div>
+    <nav>
+      <ul>
+        <li id="lunghezza" class="active" value="1">Lunghezza</li>
+        <li id="massa" value="2">Massa</li>
+        <li id="temperatura" value="3">Temperatura</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="main" class="container">
+      <div id="form" class="card">
+        
+          <div class="select">
+            <select aria-label="unitaIn" id="unitaIn" class="selector">
+              
+            </select>
+          </div>
+          <div class="select">
+            <select aria-label="unitaOut" id="unitaOut" class="selector">
+              
+            </select>
+          </div>
+          <div class="select">
+            <input type="number" id="valueIn" class="selector" placeholder="Inserisci valore"/>  
+          </div>
+          <div class="select">
+            <input type="number" id="valueOut" class="selector" placeholder="Valore convertito" disabled/>
+          </div>
+          <div class="select">
+            <button id="converti" class="selector">Converti</button>
+          </div>
+        
+      </div>
+      <div id="story" class="card">
+        <div id="valori"></div>
+        <div id="btn-story">
+        <button id="copia" data-clipboard-target="#valori">Copia</button>
+        <button id="reset">Reset</button>
+      </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div id="footer">
+      <span>&copy 2021 - Sito realizzato per fare pratica.</span>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/clipboard.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
