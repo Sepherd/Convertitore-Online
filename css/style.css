@@ -120,7 +120,6 @@ nav ul li:hover {
     margin-bottom: 20px;
     width: 100%;
     text-align: center;
-    touch-action: none;
 }
 
 .select:nth-child(1) {
