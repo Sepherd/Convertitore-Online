@@ -110,18 +110,6 @@ $("#unitaOut").on("tap", function() {
     }
 });
 
-$("#unitaIn").click(function() {
-    toConvert = $(this).val();
-    if (toConvert == converted) {
-         converted++;
-        $("#unitaOut").val(converted);
-    };
-    if (tabValue == 1 && converted == lunghezza[0].length || tabValue == 2 && converted == massa[0].length || tabValue == 3 && converted == temperatura[0].length) {
-        converted = 0;
-        $("#unitaOut").val(converted);
-    };
-});
-
 /****CONVERSIONE****/
 
 $("#converti").click(function(){
