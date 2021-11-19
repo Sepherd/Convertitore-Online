@@ -86,7 +86,7 @@ function tipoConversione() {
     converted = $("#unitaOut").val();
 };
 
-$("#unitaIn").on('click touch',function() {
+$("#unitaIn").on("tap", function() {
     toConvert = $(this).val();
     if (toConvert == converted) {
          converted++;
@@ -96,9 +96,9 @@ $("#unitaIn").on('click touch',function() {
         converted = 0;
         $("#unitaOut").val(converted);
     };
-});  
+});
 
-$("#unitaOut").on('click touch',function() {
+$("#unitaOut").on("tap", function() {
     converted = $(this).val();
     if (converted == toConvert) {
         toConvert++
@@ -108,6 +108,18 @@ $("#unitaOut").on('click touch',function() {
         toConvert = 0;
         $("#unitaIn").val(toConvert);
     }
+});
+
+$("#unitaIn").click(function() {
+    toConvert = $(this).val();
+    if (toConvert == converted) {
+         converted++;
+        $("#unitaOut").val(converted);
+    };
+    if (tabValue == 1 && converted == lunghezza[0].length || tabValue == 2 && converted == massa[0].length || tabValue == 3 && converted == temperatura[0].length) {
+        converted = 0;
+        $("#unitaOut").val(converted);
+    };
 });
 
 /****CONVERSIONE****/
