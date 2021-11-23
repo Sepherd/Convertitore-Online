@@ -86,7 +86,8 @@ function tipoConversione() {
     converted = $("#unitaOut").val();
 };
 
-$("#unitaIn").click(function() {
+$(body).on("click", "#unitaIn", function(e) {
+    e.preventDefault();
     toConvert = $(this).val();
     if (toConvert == converted) {
          converted++;
@@ -98,7 +99,8 @@ $("#unitaIn").click(function() {
     };
 });  
 
-$("#unitaOut").click(function() {
+$(body).on("click", "#unitaIn", function(e) {
+    e.preventDefault();
     converted = $(this).val();
     if (converted == toConvert) {
         toConvert++
